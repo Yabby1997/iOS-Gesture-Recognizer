@@ -21,6 +21,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아무거나 입력해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y5-jx-0k9">
+                                <rect key="frame" x="131" y="118" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -29,12 +35,18 @@
                             <constraint firstItem="LQu-sz-aqm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1yM-ov-1bq"/>
                             <constraint firstItem="LQu-sz-aqm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BLo-h6-0Ik"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LQu-sz-aqm" secondAttribute="trailing" constant="20" id="O7f-3u-0OG"/>
+                            <constraint firstItem="8y5-jx-0k9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QYq-he-agc"/>
                             <constraint firstItem="LQu-sz-aqm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eNe-p6-36D"/>
+                            <constraint firstItem="8y5-jx-0k9" firstAttribute="top" secondItem="LQu-sz-aqm" secondAttribute="bottom" constant="20" id="me1-Ek-Rhu"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="43P-75-ol9" appends="YES" id="jYp-5w-Iz4"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="randomLabel" destination="8y5-jx-0k9" id="aTd-ls-uPJ"/>
+                        <outlet property="randomTextField" destination="LQu-sz-aqm" id="G75-Gq-fbY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="43P-75-ol9"/>

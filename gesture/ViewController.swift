@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    @IBOutlet weak var randomTextField: UITextField!
+    @IBOutlet weak var randomLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,13 +21,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        randomLabel.text = randomTextField.text
+        randomTextField.text = ""
         self.view.endEditing(true)
         return true
     }
-
-    @IBAction func tapView(_ sender: Any) {
-        self.view.endEditing(true)
-    }
-    
 }
 
